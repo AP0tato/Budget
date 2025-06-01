@@ -1,0 +1,14 @@
+.links {
+    list-style-type: none;
+}
+
+.links li {
+    display: inline;
+    margin-right: 2.5%;
+}
+
+.links li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #FFFFFF;
+}

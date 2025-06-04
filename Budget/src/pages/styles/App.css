@@ -9,6 +9,7 @@ body {
   display: flex;
   line-height: 1.1;
   text-align: center;
+  min-height: 100vh;
   flex-direction: column;
 }
 

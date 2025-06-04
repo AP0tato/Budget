@@ -26,7 +26,6 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    overflow: hidden;
 }
 
 .table-budget {
@@ -34,11 +33,20 @@
     min-width: 350px;
     margin-right: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    max-height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE and Edge */
+    background-color: #233352;
+    border-radius: 16px;
+}
+
+.table-budget::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari, Opera */
 }
 
 .table-budget tr{
-    background-color: #233352;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -49,30 +57,10 @@
     border: 1px solid #1E2A38;
 }
 
-/* Top left and right corners */
-.table-budget table thead tr:first-child th:first-child {
-    border-top-left-radius: 16px;
-}
-.table-budget table thead tr:first-child th:last-child {
-    border-top-right-radius: 16px;
-}
-
-/* Bottom left and right corners */
-.table-budget table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 16px;
-}
-.table-budget table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 16px;
-}
-
 .table-budget thead tr th select {
     background-color: transparent;
     border: none;
     color: #FFFFFF;
     font-weight: bold;
     font-size: 1rem;
-}
-
-.content {
-    padding-bottom: 20px;
 }

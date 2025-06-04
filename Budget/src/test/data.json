@@ -1,0 +1,62 @@
+{
+    "expenses": [
+        {
+            "category": "Food",
+            "activity": "Groceries",
+            "amount": 7000
+        },
+        {
+            "category": "Transport",
+            "activity": "Gas",
+            "amount": 5000
+        },
+        {
+            "category": "Utilities",
+            "activity": "Electricity",
+            "amount": 12000
+        },
+        {
+            "category": "Health",
+            "activity": "Gym",
+            "amount": 4900
+        },
+        {
+            "category": "Entertainment",
+            "activity": "Movies",
+            "amount": 1200
+        },
+        {
+            "category": "Shopping",
+            "activity": "Clothes",
+            "amount": 3200
+        },
+        {
+            "category": "Dining Out",
+            "activity": "Restaurant",
+            "amount": 800
+        },
+        {
+            "category": "Travel",
+            "activity": "Flight Tickets",
+            "amount": 400
+        }
+    ],
+
+    "income": [
+        {
+            "category": "Salary",
+            "activity": "Job",
+            "amount": 30000
+        },
+        {
+            "category": "Freelance",
+            "activity": "Web Development",
+            "amount": 5000
+        },
+        {
+            "category": "Investments",
+            "activity": "Stocks",
+            "amount": 2000
+        }
+    ]
+}

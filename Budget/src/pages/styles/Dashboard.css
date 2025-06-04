@@ -1,0 +1,78 @@
+.expense {
+    color: #FF6B6B;
+}
+
+.income {
+    color: #4ECDC4;
+}
+
+.graph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pie-chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-budget table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.table-budget {
+    flex: 1;
+    min-width: 350px;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.table-budget tr{
+    background-color: #233352;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table-budget th, .table-budget td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #1E2A38;
+}
+
+/* Top left and right corners */
+.table-budget table thead tr:first-child th:first-child {
+    border-top-left-radius: 16px;
+}
+.table-budget table thead tr:first-child th:last-child {
+    border-top-right-radius: 16px;
+}
+
+/* Bottom left and right corners */
+.table-budget table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+.table-budget table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
+
+.table-budget thead tr th select {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.content {
+    padding-bottom: 20px;
+}

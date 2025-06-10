@@ -1,0 +1,41 @@
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.table-budget button {
+    background: none;
+    border: none;
+}
+
+.table-budget button img {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.2s;
+}
+
+.table-budget button img:hover {
+    transform: scale(1.5);
+}
+
+.table-budget tfoot tr td.add-item {
+    text-align: center;
+}
+
+.table-budget tfoot tr td.add-item button {
+    color: #a1ff6b;
+    font-size: 1.0rem;
+    transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Remove or override this for the add button: */
+.table-budget tfoot tr td.add-item button img:hover {
+    transform: none;
+}
+
+.table-budget tfoot tr td.add-item button:hover {
+    transform: scale(1.5);
+}

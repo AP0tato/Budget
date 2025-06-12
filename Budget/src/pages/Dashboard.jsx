@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles/Dashboard.css';
 import data from '../test/data.json' assert { type: 'json'};
 import { PieChart, Pie, Cell } from 'recharts';
@@ -7,10 +8,21 @@ const COLORS = {
   income: '#4ECDC4',  // green/blue for income
 };
 
+const CURRENCY_RATES = { USD : 1, CAD : 1.25, EUR : 0.85, GBP : 0.75 };
+const TIME_DIVISORS = { YEAR : 1, MONTH : 12, WEEK : 52, DAY : 365 };
+
 const expenses = data.expenses;
 const income = data.income;
 
 const tableData = () => {
+  const [currency, setCurrency] = useState('USD');
+  const [timeframe, setTimeframe] = useState('year');
+
+
+  function convertAmount(amount) {
+    return (amount * CURRENCY_RATES[currency]) / TIME_DIVISORS[timeframe.toUpperCase()];
+  }
+
   return (
     <div className="table-budget">
       <table>
@@ -18,12 +30,12 @@ const tableData = () => {
           <tr key="header">
             <th>Category</th>
             <th>Activity</th>
-            <th>Amount / <select className="timeframe">
+            <th>Amount / <select className="timeframe" value={timeframe} onChange={(e) => setTimeframe(e.target.value)}>
               <option value="year">Year</option>
               <option value="month">Month</option>
               <option value="week">Week</option>
               <option value="day">Day</option>
-              </select><br/>(<select className="currency">
+              </select><br/>(<select className="currency" value={currency} onChange={(e) => setCurrency(e.target.value)}>
               <option value="USD">USD</option>
               <option value="EUR">EUR</option>
               <option value="GBP">GBP</option>
@@ -37,7 +49,7 @@ const tableData = () => {
               <tr key={index} className="expense">
                 <td>{item.category}</td>
                 <td>{item.activity}</td>
-                <td>{item.amount}</td>
+                <td>{convertAmount(item.amount).toLocaleString(undefined, { style: 'currency', currency})}</td>
               </tr>
             )
           })}
@@ -46,7 +58,7 @@ const tableData = () => {
               <tr key={index} className="income">
                 <td>{item.category}</td>
                 <td>{item.activity}</td>
-                <td>{item.amount}</td>
+                <td>{convertAmount(item.amount).toLocaleString(undefined, { style: 'currency', currency})}</td>
               </tr>
             )
           })}

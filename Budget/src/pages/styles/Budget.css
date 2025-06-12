@@ -14,7 +14,7 @@
     transition: transform 0.2s;
 }
 
-.table-budget button img:hover {
+.table-budget tbody button img:hover {
     transform: scale(1.5);
 }
 
@@ -31,11 +31,26 @@
     gap: 6px;
 }
 
-/* Remove or override this for the add button: */
-.table-budget tfoot tr td.add-item button img:hover {
-    transform: none;
+.table-budget tfoot tr td.add-item button:hover {
+    transform: scale(1.2);
 }
 
-.table-budget tfoot tr td.add-item button:hover {
-    transform: scale(1.5);
+.modal-backdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #233352;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  min-width: 300px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+  text-align: center;
 }

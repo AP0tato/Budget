@@ -11,6 +11,11 @@
     font-size: 1.2em;
     text-decoration: none;
     color: #FFFFFF;
+    transition-duration: 0.2s;;
+}
+
+.links li a:hover {
+    color: #6e9eff;
 }
 
 nav {

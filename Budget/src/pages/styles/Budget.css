@@ -1,42 +1,46 @@
 .content {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.table-budget {
+  margin-bottom: 32px;
 }
 
 .table-budget button {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .table-budget button img {
-    height: 20px;
-    width: 20px;
-    transition: transform 0.2s;
+  height: 20px;
+  width: 20px;
+  transition: transform 0.2s;
 }
 
 .table-budget tbody button img:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .table-budget tfoot tr td.add-item {
-    text-align: center;
+  text-align: center;
 }
 
 .table-budget tfoot tr td.add-item button {
-    color: #a1ff6b;
-    font-size: 1.0rem;
-    transition: transform 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+  color: #a1ff6b;
+  font-size: 1.0rem;
+  transition: transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .table-budget tfoot tr td.add-item button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
   z-index: 10;
@@ -46,6 +50,10 @@
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 8px;
   background: #233352;
   color: #fff;
   padding: 2rem;
@@ -53,4 +61,67 @@
   min-width: 300px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.3);
   text-align: center;
+}
+
+.modal .buttons button {
+  color: white;
+  transition: transform 0.2s;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.modal .buttons button:hover {
+  transform: scale(1.2);
+}
+
+.modal .item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal .item-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.modal .item-form .div-1, .modal .item-form .div-2, .modal .item-form .div-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+
+.modal .item-form input[type="text"], .modal .item-form .timeframe, .modal .item-form .currency, .modal .item-form .category{
+    background: none;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid #1E2A38;
+    border-radius: 5px;
+}
+
+.modal .buttons {
+  padding-top: 25px;
+}
+
+.content .graphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.budget-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.table-budget, .graphs {
+  
 }

@@ -14,6 +14,13 @@ const TIME_DIVISORS = { YEAR : 1, MONTH : 12, WEEK : 52, DAY : 365 };
 const expenses = data.expenses;
 const income = data.income;
 
+function toTitleCase(str) {
+  return str
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 const tableData = () => {
   const [currency, setCurrency] = useState('USD');
   const [timeframe, setTimeframe] = useState('year');
@@ -47,8 +54,8 @@ const tableData = () => {
           {expenses && expenses.map((item, index) => {
             return (
               <tr key={index} className="expense">
-                <td>{item.category}</td>
-                <td>{item.activity}</td>
+                <td>{toTitleCase(item.category)}</td>
+                <td>{toTitleCase(item.activity)}</td>
                 <td>{convertAmount(item.amount).toLocaleString(undefined, { style: 'currency', currency})}</td>
               </tr>
             )
@@ -56,8 +63,8 @@ const tableData = () => {
           {income && income.map((item, index) => {
             return (
               <tr key={index} className="income">
-                <td>{item.category}</td>
-                <td>{item.activity}</td>
+                <td>{toTitleCase(item.category)}</td>
+                <td>{toTitleCase(item.activity)}</td>
                 <td>{convertAmount(item.amount).toLocaleString(undefined, { style: 'currency', currency})}</td>
               </tr>
             )
@@ -75,7 +82,7 @@ const Dashboard = () => {
     let obj = [];
     if(expenses) {
       expenses.forEach(item => {
-        obj.push({ name:item.category, value: item.amount, type: 'expense'})
+        obj.push({ name:toTitleCase(item.category), value: item.amount, type: 'expense'})
         avg += item.amount;
         count++;
       })
@@ -83,7 +90,7 @@ const Dashboard = () => {
 
     if(income) {
       income.forEach(item => {
-        obj.push({ name:item.category, value: item.amount, type: 'income'})
+        obj.push({ name:toTitleCase(item.category), value: item.amount, type: 'income'})
         avg += item.amount;
         count++;
       })

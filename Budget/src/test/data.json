@@ -1,61 +1,61 @@
 {
     "expenses": [
         {
-            "category": "Food",
-            "activity": "Groceries",
+            "category": "food",
+            "activity": "groceries",
             "amount": 7000
         },
         {
-            "category": "Transport",
-            "activity": "Gas",
+            "category": "transport",
+            "activity": "gas",
             "amount": 5000
         },
         {
-            "category": "Utilities",
-            "activity": "Electricity",
+            "category": "utilities",
+            "activity": "electricity",
             "amount": 12000
         },
         {
-            "category": "Health",
-            "activity": "Gym",
+            "category": "health",
+            "activity": "gym",
             "amount": 4900
         },
         {
-            "category": "Entertainment",
-            "activity": "Movies",
+            "category": "entertainment",
+            "activity": "movies",
             "amount": 1200
         },
         {
-            "category": "Shopping",
-            "activity": "Clothes",
+            "category": "shopping",
+            "activity": "clothes",
             "amount": 3200
         },
         {
-            "category": "Dining Out",
-            "activity": "Restaurant",
+            "category": "food",
+            "activity": "restaurants",
             "amount": 800
         },
         {
-            "category": "Travel",
-            "activity": "Flight Tickets",
+            "category": "travel",
+            "activity": "flight tickets",
             "amount": 400
         }
     ],
 
     "income": [
         {
-            "category": "Salary",
-            "activity": "Job",
+            "category": "salary",
+            "activity": "job",
             "amount": 30000
         },
         {
-            "category": "Freelance",
-            "activity": "Web Development",
+            "category": "freelance",
+            "activity": "web development",
             "amount": 5000
         },
         {
-            "category": "Investments",
-            "activity": "Stocks",
+            "category": "investments",
+            "activity": "stocks",
             "amount": 2000
         }
     ]

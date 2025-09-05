@@ -233,10 +233,8 @@ const Budget = () => {
     <div className="content">
       <h1>Budget</h1>
       <div className="budget-container">
-        <div className="table-budget">
-          {tableData()}
-          {showModal && <Modal />}
-        </div>
+        {tableData()}
+        {showModal && <Modal />}
         <div className="graphs">
           <div className="pie-chart-container">
             <PieChart width={350} height={350}>

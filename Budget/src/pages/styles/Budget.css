@@ -5,6 +5,7 @@
 
 .table-budget {
   margin-bottom: 32px;
+  min-height: 670px;
 }
 
 .table-budget button {
@@ -120,8 +121,4 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
-}
-
-.table-budget, .graphs {
-  
 }
